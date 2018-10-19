@@ -1,0 +1,22 @@
+package com.bemeal.demo;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@Configuration
+@EnableTransactionManagement
+@MapperScan(basePackages="com.bemeal.demo.mapper")
+@ComponentScan(basePackages="com.bemeal.demo") //없어도 됨
+public class DatabaseConfig {
+	@Bean
+	public SqlSessionFactory sqlSessionFactory() throws Exception {
+		final SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+		
+		return sqlSessionFactory.getObject();
+	}
+}

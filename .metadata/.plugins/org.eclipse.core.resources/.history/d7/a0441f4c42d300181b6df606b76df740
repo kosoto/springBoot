@@ -1,0 +1,14 @@
+package com.bemeal.demo.mbr;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+
+	@Override
+	public String countAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

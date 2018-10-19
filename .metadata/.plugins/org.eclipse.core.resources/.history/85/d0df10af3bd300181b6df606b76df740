@@ -1,0 +1,5 @@
+package com.bemeal.demo;
+
+public class DatabaseConfig {
+
+}
