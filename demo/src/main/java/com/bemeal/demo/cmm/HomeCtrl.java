@@ -20,4 +20,28 @@ public class HomeCtrl {
 		model.addAttribute("count",count);
 		return "index";
 	}
+	@GetMapping
+	@RequestMapping("/pieChart")
+	public String pieChart(Model model) {
+		System.out.println("----pieChart----");
+		return "util/pieChart";
+	}
+	@GetMapping
+	@RequestMapping("/wordCloud")
+	public String wordCloud(Model model) {
+		System.out.println("----wordCloud----");
+		return "util/wordCloud";
+	}
+	@GetMapping
+	@RequestMapping("/gmap")
+	public String gmap(Model model) {
+		System.out.println("----gmap----");
+		return "util/gmap";
+	}
+	@GetMapping
+	@RequestMapping("/initmap")
+	public String initmap(Model model) {
+		System.out.println("----initmap----");
+		return "util/initmap";
+	}
 }
